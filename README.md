@@ -54,9 +54,9 @@ Used to create/update user data.
 **Content** :
 ```json
 {
-    'status'=>'validation_error',
-    'errors'=>[
-        'name'  =>  'Name is required.'
+    "status":"validation_error",
+    "errors":[
+        "name":"Name is required."
     ]
 }
 ```
@@ -103,7 +103,7 @@ Used to authenticate a user.
 {
     "status":"validation_error",
     "errors":[
-        "name":"Name is required."
+        {"name":"Name is required."}
     ]
 }
 ```
