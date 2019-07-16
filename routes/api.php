@@ -25,3 +25,7 @@ Route::post('user/auth', 'UserController@auth');
 Route::post('movies/store', 'MoviesController@store');
 Route::delete('movies/{id}', 'MoviesController@delete');
 Route::get('movies', 'MoviesController@all');
+
+//favorite movies
+Route::post('fav-movies/store', 'UserFavoriteMoviesController@store');
+Route::get('fav-movies', 'UserFavoriteMoviesController@all');

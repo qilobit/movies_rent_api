@@ -42,11 +42,11 @@ class MoviesController extends Controller
             ], 400);
         }        
         
-        $user = MoviesModel::find($r->get('id'));
+        $movie = MoviesModel::find($r->get('id'));
         
-        if(!$user)
+        if(!$movie)
         {
-            $user = new MoviesModel();
+            $movie = new MoviesModel();
         }
         
         if($r->has('poster'))
@@ -54,14 +54,14 @@ class MoviesController extends Controller
             //delete old image on update
             $image_name = time().'.'.request()->poster->getClientOriginalExtension();
             request()->poster->move(public_path('images/movies'), $image_name);
-            $user->poster = public_path('images/movies/').$image_name;              
+            $movie->poster = public_path('images/movies/').$image_name;              
         }
         
-        $user->title        = $r->get('title');
-        $user->year         = $r->get('year');
-        $user->imbd_rating  = $r->get('imbd_rating');
+        $movie->title        = $r->get('title');
+        $movie->year         = $r->get('year');
+        $movie->imbd_rating  = $r->get('imbd_rating');
            
-        $user->save();
+        $movie->save();
         
         return response(200);
         
