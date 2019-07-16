@@ -17,8 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+//users
 Route::post('user/store', 'UserController@store');
 Route::post('user/auth', 'UserController@auth');
 
-
+//movies
+Route::post('movies/store', 'MoviesController@store');
+Route::delete('movies/{id}', 'MoviesController@delete');
+Route::get('movies', 'MoviesController@all');
