@@ -1,9 +1,11 @@
 ## Movies rent API v0.1
 
-### composer require tymon/jwt-auth
+**Instalar dependencias:** `composer update`
 
-### php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+**Instalar libreria jwt:** `composer require tymon/jwt-auth`
 
-### php artisan jwt:secret
+**Configurar libreria jwt:** `php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"`
 
-## http://movies-rent.herokuapp.com/public/api
+**Generar clave para libreria jwt:** `php artisan jwt:secret`
+
+#### **Instancia del API** http://movies-rent.herokuapp.com/public/api
