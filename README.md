@@ -8,7 +8,7 @@
 
 **Generate jwt secret key:** `php artisan jwt:secret`
 
-##### **Instance example (missing db installation)** http://movies-rent.herokuapp.com/public/api
+##### **Instance example (missing db installation)** http://movies-rent.herokuapp.com/public/api/movies
 
 
 ### API Documentation
