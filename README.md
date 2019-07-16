@@ -14,9 +14,13 @@
 ### API Documentation
 # Users
 Used to create/update user data.
+
 **URL** : `/api/user/store`
+
 **Method** : `POST`
+
 **Auth required** : NO
+
 **Data constraints**
 ```json
 {
