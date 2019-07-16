@@ -11,8 +11,15 @@ class MoviesController extends Controller
     
     public function all(Request $r)
     {
+        $rs = null;
         
-        $rs = MoviesModel::paginate(100);
+        if($r->has('title'))
+        {           
+            $rs = MoviesModel::where('title', 'like', '%'.$r->get('title').'%')
+                    ->paginate(100);
+        }else{
+            $rs = MoviesModel::paginate(100);
+        }
 
         return response()->json($rs, 200);
     }
