@@ -56,7 +56,7 @@ Used to create/update user data.
 {
     "status":"validation_error",
     "errors":[
-        "name":"Name is required."
+        {"name":"Name is required."}
     ]
 }
 ```
