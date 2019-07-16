@@ -89,8 +89,9 @@ Used to authenticate a user.
 **Content** :
 ```json
 {
-    'token'=>'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaXZlbCI6IjgiLCJ1c2VyIjo5MiwidXNlcm5hbWUiOiJkZXZfIiwiZnVsbG5hbWUiOiJEZXZfUHJ1ZWJhcyI'
+  "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuaXZlbCI6IjgiLCJ1c2VyIjo5MiwidXNlcm5hbWUiOiJkZXZfIiwiZnVsbG5hbWUiOiJEZXZfUHJ1ZWJhcyI"
 }
+```
 
 ## Error Response
 **Condition** : If any field does not pass validation.
@@ -100,9 +101,9 @@ Used to authenticate a user.
 **Content** :
 ```json
 {
-    'status'=>'validation_error',
-    'errors'=>[
-        'name'  =>  'Name is required.'
+    "status":"validation_error",
+    "errors":[
+        "name":"Name is required."
     ]
 }
 ```
@@ -114,7 +115,7 @@ Used to authenticate a user.
 **Content** :
 ```json
 {
-    'data'  =>'User not found'
+    "data":"User not found."
 }
 ```
 
@@ -125,7 +126,7 @@ Used to authenticate a user.
 **Content** :
 ```json
 {
-    'data'  =>'Invalid credentials'
+    "data":"Invalid credentials"
 }
 ```
 
